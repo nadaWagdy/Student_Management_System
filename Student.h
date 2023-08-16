@@ -1,7 +1,7 @@
 #ifndef Student_h
 #define Student_h
 
-#define MAX_STUDENTS 5
+#define MAX_STUDENTS 100
 #define FACULTY_MAX_ACADEMIC_YEAR 5
 #define MAX_CHARACTER 200
 #include <stdio.h>

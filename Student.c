@@ -19,8 +19,6 @@ void add_student(Student *students, int *numOfStudents)
         char new_name[MAX_CHARACTER];
         printf("Enter student name: ");
         scanf(" %[^\n]", &new_name);
-        // fgets(&new_name, sizeof(new_name), stdin);
-        // printf("name is: %s ", new_name);
         if(checkTwoWords(new_name))
         {
             strcpy(students[*numOfStudents].student_name, new_name);
@@ -34,7 +32,6 @@ void add_student(Student *students, int *numOfStudents)
         char new_id[MAX_CHARACTER];
         printf("Enter student id: ");
         scanf(" %[^\n]", &new_id);
-        // fgets(new_id, sizeof(new_id), stdin);
         if(checkSevenDigitCode(new_id))
         {
             if(check_id(students, numOfStudents, new_id))
@@ -74,7 +71,6 @@ void add_student(Student *students, int *numOfStudents)
         scanf(" %d", &new_academic_year);
         if(new_academic_year >=1 && new_academic_year <= FACULTY_MAX_ACADEMIC_YEAR)
         {
-            // int *ptr = &students[*numOfStudents].academic_year;
             students[*numOfStudents].academic_year = new_academic_year;
             break;
         }else
@@ -119,7 +115,6 @@ void remove_students(Student *students, int *numOfStudents)
         {
             if(!check_id(students, numOfStudents, id))
             {
-                // students[removal_index] = null;
                 for(int i = removal_index; i < *numOfStudents - 1; i++)
                 {
                     students[i] = students[i + 1];
@@ -282,7 +277,6 @@ void print_students(Student *students, int *numOfStudents)
 
 void print_one_student(Student *students, int *i)
 {
-    // printf("\n\nStudent's data:\n\n");
     printf("\nName: %s\n", students[*i].student_name);
     printf("id: %s\n", students[*i].student_id);
     printf("Gender: %c\n", students[*i].student_gender);

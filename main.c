@@ -19,8 +19,6 @@ int main()
         }
 
         fclose(file);
-
-        printf("Number of instances loaded: %d\n", numOfStudents);
     }
     /* ************************** */
 
